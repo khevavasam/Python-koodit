@@ -1,8 +1,25 @@
-# Faulty program, infinite loop
+# Kysymys 6
 
-number = 1
-while number<5:
-    print(number)
+import random
 
-# This part is never reached:
-print("All ready.")
+code_3 = ''.join(str(random.randint(0, 9)) for _ in range(3))
+code_4 = ''.join(str(random.randint(1, 6)) for _ in range(4))
+
+print("3-digit code:", code_3)
+print("4-digit code:", code_4)
+
+
+
+# import random
+#
+# code_3 = ""
+# for _ in range(3):
+#     code_3 += str(random.randint(0,9))
+#
+# code_4 = ""
+# for _ in range(4):
+#     code_4 += str(random.randint(1,6))
+#
+#
+# print("3-digit code:", code_3)
+# print("4-digit code:", code_4)
