@@ -67,11 +67,11 @@
 
 # Faulty program, infinite loop
 
-# number = 1
-# while number<5:
-#     print(number)
-#     number = number + 1
-# print("All ready.")
+number = 1
+while number<5:
+    print(number)
+    number = number + 1
+print("All ready.")
 
 
 
