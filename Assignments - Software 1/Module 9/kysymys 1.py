@@ -4,9 +4,7 @@ class Car:
         self.maximum_speed = maximum_speed
         self.current_speed = 0
         self.travelled_distance = 0
-
 car = Car("ABC-123", 142)
-
 print(f"License plate: {car.license_plate}")
 print(f"Maximum speed: {car.maximum_speed} km/h")
 print(f"Current speed: {car.current_speed} km/h")
