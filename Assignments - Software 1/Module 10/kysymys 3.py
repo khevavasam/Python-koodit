@@ -23,3 +23,18 @@ class Elevator:
             self.floor_up()
         while self.current_floor > target:
             self.floor_down()
+
+
+class Building:
+    def __init__(self, bottom_floor, top_floor, num_elevators):
+        self.bottom_floor = bottom_floor
+        self.top_floor = top_floor
+        self.elevators = [Elevator(bottom_floor, top_floor) for _ in range(num_elevators)]
+
+    def run_elevator(self, index, target_floor):
+        if 0 <= index < len(self.elevators):
+            self.elevators[index].go_to_floor(target_floor)
+
+    def fire_alarm(self):
+        for e in self.elevators:
+            e.go_to_floor(self.bottom_floor)
