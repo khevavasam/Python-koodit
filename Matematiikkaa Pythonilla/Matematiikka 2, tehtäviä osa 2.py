@@ -1,15 +1,24 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
-# 1) rad -> asteet
-print("rad -> asteet:", np.degrees([2.493, 0.911]))
+#-3π...3π
+X = np.linspace(-3*np.pi, 3*np.pi, 256)
+C = np.cos(X)
+S = np.sin(X)
 
-# 2) asteet -> rad
-print("asteet -> rad:", np.radians([137.7, 62.3]))
+#kuva
+plt.figure(figsize=(19.2, 4.8))
 
-# 3) kulmat ja radiaanit
-angles = np.array([30, 45, 60, 90, 120, 135, 150, 180, 270, 360])
-print("asteet:", angles)
-print("radiaanit:", np.radians(angles))
+#käyrät eri väreillä ja tyyleillä
+plt.plot(X, C, 'r--', label='cos(x)')
+plt.plot(X, S, 'b:', label='sin(x)')
 
-# 4) hypotenuusa (a=1.6, b=2.3)
-print("hypotenuusa:", np.hypot(1.6, 2.3))
+#selite ja akselit
+plt.legend()
+plt.xticks(
+    [-3*np.pi, -2*np.pi, -np.pi, 0, np.pi, 2*np.pi, 3*np.pi],
+    [r'$-3\pi$', r'$-2\pi$', r'$-\pi$', '0', r'$\pi$', r'$2\pi$', r'$3\pi$']
+)
+plt.yticks([-1, 0, 1])
+
+plt.show()
